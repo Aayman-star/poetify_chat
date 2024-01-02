@@ -1,0 +1,27 @@
+# def add_convo(prompt:str,answer:str):
+#         engine: Engine = create_engine(conn_str)
+#         with engine.begin() as conn:
+#           conn.execute(text("CREATE TABLE IF NOT EXISTS chat_history (question TEXT, answer TEXT)"))
+#           conn.execute(text("INSERT INTO chat_history (question, answer) VALUES (:question, :answer)"),
+#         [{"question": prompt, "answer": answer}],
+#         )
+          
+# def display_chat():
+#      engine: Engine = create_engine(conn_str)
+      
+#      with engine.begin() as conn:
+#         my_table = conn.execute(text("SELECT * FROM chat_history"));
+#         my_table = pd.DataFrame(my_table)
+#     #print(my_table)
+#         rows,cols = my_table.shape
+#     #print(rows,cols)
+#         if rows > 0 : 
+#             for i in range(rows):
+#                 print(my_table.at[i,"question"],"------------",my_table.at[i,"answer"])
+#                 with st.chat_message("user"):
+#                      st.markdown(my_table.at[i,"question"])
+#                 with st.chat_message("assistant"):
+#                       st.markdown(my_table.at[i,"answer"])
+                     
+#         else:
+#             st.markdown("No Conversation history")
